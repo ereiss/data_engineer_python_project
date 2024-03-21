@@ -16,38 +16,6 @@
 
 > ### Dataset description
 
-![image](https://github.com/ereiss/data_engineer_python_project/assets/16428540/04d168e3-aaef-4e70-8919-53a4a864be26)
+![image](https://github.com/ereiss/data_engineer_python_project/assets/16428540/4db6616f-a52c-4a66-907d-9c9f97e10230)
 
 
->> <dl>
-  <dt>show_id</dt>
-    <dd> -	Unique ID for every Movie / Tv Show</dd>
-  <dt>type</dt>
-	  <dd> -	Identifier - A Movie or TV Show</dd>
-  <dt>title</dt>
-	  <dd> - Title of the Movie / Tv Show</dd>
-  <dt>director</dt>
-	  <dd> -	Director of the Movie</dd>
-  <dt>cast</dt>
-	  <dd> -	Actors involved in the movie / show</dd>
-  <dt>country</dt>
-	  <dd> -	Country where the movie / show was produced</dd>
-  <dt>date_added</dt>
-	  <dd> -	Date it was added on Netflix</dd>
-  <dt>release_year</dt>
-	  <dd> -	Actual Release year of the move / show</dd>
-  <dt>rating</dt>
-	  <dd> -	TV Rating of the movie / show</dd>
-  <dt>duration</dt>
-	  <dd> -	Total Duration - in minutes or number of seasons</dd>
-  <dt>listed_in</dt>
-	  <dd> -	Genere</dd>
-  <dt>description</dt>
-	  <dd> -	The summary description</dd>
-</dl>
-
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
