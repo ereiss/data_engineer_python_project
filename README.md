@@ -16,6 +16,10 @@
 
 > ### Dataset description
 
-![image](https://github.com/ereiss/data_engineer_python_project/assets/16428540/4db6616f-a52c-4a66-907d-9c9f97e10230)
+![image](https://github.com/ereiss/data_engineer_python_project/assets/16428540/37acf65f-a78f-4d2c-b208-c0a9d55126bd)
+
+
+
+
 
 
