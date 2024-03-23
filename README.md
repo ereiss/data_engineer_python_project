@@ -67,24 +67,27 @@ It involves various steps to ensure data integrity and consistency. Before we di
 
 These are the steps that are going to be taken:
 
-1. **Handle Missing Values**:
+1. **Remove Columns With No Business Value**:
+   - show_id and description can be removed since these are not columns with any business value to us
+
+2. **Handle Missing Values**:
    - Identify columns with missing values and decide how to handle them.
    - Options include removing rows with missing values or imputing them using appropriate methods.
 
-2. **Standardize Data Formats**:
+3. **Standardize Data Formats**:
    - Convert all dates to a consistent format (e.g., YYYY-MM-DD).
    - Standardize durations to a consistent unit (e.g., minutes for movies, seasons for TV shows).
 
-3. **Parse and Extract Information**:
+4. **Parse and Extract Information**:
    - Extract useful information from columns containing multiple pieces of data (e.g., cast, listed_in).
-   - Split these columns into multiple columns or use them to create new features.
+   - Split columns into multiple columns or use them to create new features (e.g., date_add splitted into year_added, month_added, day_added).
 
-4. **Correct Inconsistencies**:
+5. **Correct Inconsistencies**:
    - Standardize country names, genres.
    - Ensure consistent spelling and formatting for genres.
    - Handle inconsistencies names like remove leading/trailing spaces.
 
-5. **Remove Duplicates**:
+6. **Remove Duplicates**:
    - Check for and remove duplicate rows.
    - Be cautious when removing duplicates to avoid deleting legitimate data.
 
@@ -94,19 +97,23 @@ The schema for the database table where the cleaned data is loaded follows:
 
 - Table Name: `netflix_titles`
   
-  | Column Name   | Data Type | Description          |
-  |---------------|-----------|----------------------|
-  | show_id       | VARCHAR   | Unique identifier    |
-  | type          | VARCHAR   | Type of content      |
-  | title         | VARCHAR   | Title of the content |
-  | director      | VARCHAR   | Director(s)          |
-  | cast          | VARCHAR   | Cast members         |
-  | country       | VARCHAR   | Country of origin    |
-  | release_year  | INTEGER   | Year of release      |
-  | rating        | VARCHAR   | Content rating       |
-  | duration      | VARCHAR   | Duration             |
-  | listed_in     | VARCHAR   | Genre(s)             |
-  | description   | VARCHAR   | Description          |
+  | Column Name     | Data Type |
+  |-----------------|-----------|
+  | type            | VARCHAR   |
+  | title           | VARCHAR   |
+  | director        | VARCHAR   |
+  | actor           | VARCHAR   |
+  | country         | VARCHAR   |
+  | date_added      | DATETIME  |
+  | release_year    | INTEGER   |
+  | rating          | VARCHAR   |
+  | duration        | VARCHAR   |
+  | genres          | VARCHAR   |
+  | duration_digits | INTEGER   |
+  | duration_unit   | VARCHAR   |
+  | year_added      | INTEGER   |
+  | month_added     | INTEGER   |
+  | day_added       | INTEGER   |
 
 ## Conclusion
 
