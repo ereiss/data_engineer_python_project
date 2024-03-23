@@ -54,7 +54,22 @@ To run the ETL process:
 ## Detailed Process
 
 1. **Extract**:
-   - The provided dataset, `netflix_titles.csv`, is read into a Pandas DataFrame.
+   - The provided dataset, `netflix_titles.csv`, is read into a Pandas DataFrame. The following describes the dataset content: 
+
+     | Column Name   | Description                                      |
+     |---------------|--------------------------------------------------|
+     | show_id       | Unique ID for every Movie / Tv Show              |
+     | type          | Identifier - A Movie or TV Show                  |
+     | title         | Title of the Movie / Tv Show                     |
+     | director      | Director of the Movie                            |
+     | cast          | Actors involved in the movie / show              |
+     | country       | Country where the movie / show was produced      |
+     | date_added    | Date it was added on Netflix                     |	
+     | release_year  | Actual Release year of the move / show           |
+     | rating        | TV Rating of the movie / show                    |
+     | duration      | Total Duration - in minutes or number of seasons |
+     | listed_in     | Genere                                           |
+     | description   | The summary description                          |
 
 2. **Transform**:
    - Data cleaning and preprocessing steps are performed, including handling missing values, standardizing data formats, and correcting inconsistencies.
