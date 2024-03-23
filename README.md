@@ -68,7 +68,7 @@ It involves various steps to ensure data integrity and consistency. Before we di
 These are the steps that are going to be taken:
 
 1. **Remove Columns With No Business Value**:
-   - show_id and description can be removed since these are not columns with any business value to us
+   - show_id and description can be removed since they are with no business value to us
 
 2. **Handle Missing Values**:
    - Identify columns with missing values and decide how to handle them.
