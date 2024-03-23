@@ -18,6 +18,76 @@
 
 ![image](https://github.com/ereiss/data_engineer_python_project/blob/main/artifacts/netflix_dataset_description.png)
 
+# ETL Project: Cleaning and Loading Netflix Titles Dataset
+
+## Overview
+
+This project performs Extract, Transform, and Load (ETL) operations on the Netflix Titles dataset. The dataset, sourced from Kaggle, contains information about various movies and TV shows available on Netflix.
+
+The ETL process involves:
+
+1. **Extract**: Reading the data from the provided `netflix_titles.csv` file.
+2. **Transform**: Performing comprehensive data cleaning and preparation.
+3. **Load**: Writing the cleaned data into a relational database using SQLAlchemy.
+
+## Data Source
+
+- **Dataset**: `netflix_titles.csv`
+- **Source**: [Netflix Movies and TV Shows](https://www.kaggle.com/shivamb/netflix-shows)
+
+## Tools and Libraries Used
+
+- Python
+- Pandas
+- SQLAlchemy
+- Jupyter Notebook (for initial data exploration and testing)
+
+## Instructions
+
+To run the ETL process:
+
+1. Clone this repository to your local machine.
+2. Ensure you have Python and the required libraries installed (Pandas, SQLAlchemy).
+3. Download the `netflix_titles.csv` dataset from the provided source and place it in the project directory.
+4. Open the Jupyter Notebook `ETL_Netflix.ipynb` and execute the cells sequentially.
+
+## Detailed Process
+
+1. **Extract**:
+   - The provided dataset, `netflix_titles.csv`, is read into a Pandas DataFrame.
+
+2. **Transform**:
+   - Data cleaning and preprocessing steps are performed, including handling missing values, standardizing data formats, and correcting inconsistencies.
+   - Comprehensive cleaning operations are conducted to ensure data integrity and consistency.
+
+3. **Load**:
+   - A connection to the database is established using SQLAlchemy.
+   - The cleaned DataFrame is written to the database as a new table.
+
+## Database Schema
+
+The schema for the database table where the cleaned data is loaded follows:
+
+- Table Name: `netflix_titles`
+  
+  | Column Name   | Data Type | Description          |
+  |---------------|-----------|----------------------|
+  | show_id       | VARCHAR   | Unique identifier    |
+  | type          | VARCHAR   | Type of content      |
+  | title         | VARCHAR   | Title of the content |
+  | director      | VARCHAR   | Director(s)          |
+  | cast          | VARCHAR   | Cast members         |
+  | country       | VARCHAR   | Country of origin    |
+  | release_year  | INTEGER   | Year of release      |
+  | rating        | VARCHAR   | Content rating       |
+  | duration      | VARCHAR   | Duration             |
+  | listed_in     | VARCHAR   | Genre(s)             |
+  | description   | VARCHAR   | Description          |
+
+## Conclusion
+
+This ETL project successfully cleans and loads the Netflix Titles dataset into a relational database, making it easier to query and analyze the data for further insights and applications.
+
 
 
 
