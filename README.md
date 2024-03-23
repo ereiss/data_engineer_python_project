@@ -1,23 +1,3 @@
-# Data Engineer Course - Python Project
-
-## Project's requirements
-> ## Goals
-* Design and implement an ETL end-to-end
-* Practice Python project development
-* Practice Pandas capabilities
-* Experiment with real-life data sets
-
-## Introduction
-
-> ### Netflix Movies and TV Shows
-* Netflix is one of the most popular media and video streaming platforms. They have over 8000 movies or tv shows available on their platform, as of mid-2021, they have over 200M Subscribers globally.
-* Referring to kaggle Netflix Movies and TV Shows dataset: **netflix_titles.csv**:
->> This tabular dataset consists of listings of all the movies and tv shows available on Netflix, along with details such as - cast, directors, ratings, release year, duration, etc.
-
-> ### Dataset description
-
-![image](https://github.com/ereiss/data_engineer_python_project/blob/main/artifacts/netflix_dataset_description.png)
-
 # ETL Project: Cleaning and Loading Netflix Titles Dataset
 
 ## Overview
@@ -79,6 +59,35 @@ To run the ETL process:
    - A connection to the database is established using SQLAlchemy.
    - The cleaned DataFrame is written to the database as a new table.
 
+## Cleaning the Netflix Titles dataset
+
+It involves various steps to ensure data integrity and consistency. Before we dig in the actions that are going to take place lets have a short sample view on dataset:
+
+![image](https://github.com/ereiss/data_engineer_python_project/blob/main/artifacts/head.png)
+
+These are the steps that are going to be taken:
+
+1. **Handle Missing Values**:
+   - Identify columns with missing values and decide how to handle them.
+   - Options include removing rows with missing values or imputing them using appropriate methods.
+
+2. **Standardize Data Formats**:
+   - Convert all dates to a consistent format (e.g., YYYY-MM-DD).
+   - Standardize durations to a consistent unit (e.g., minutes for movies, seasons for TV shows).
+
+3. **Parse and Extract Information**:
+   - Extract useful information from columns containing multiple pieces of data (e.g., cast, listed_in).
+   - Split these columns into multiple columns or use them to create new features.
+
+4. **Correct Inconsistencies**:
+   - Standardize country names, genres.
+   - Ensure consistent spelling and formatting for genres.
+   - Handle inconsistencies names like remove leading/trailing spaces.
+
+5. **Remove Duplicates**:
+   - Check for and remove duplicate rows.
+   - Be cautious when removing duplicates to avoid deleting legitimate data.
+
 ## Database Schema
 
 The schema for the database table where the cleaned data is loaded follows:
@@ -117,7 +126,5 @@ This ETL project successfully cleans and loads the Netflix Titles dataset into a
   | duration      | Total Duration - in minutes or number of seasons |
   | listed_in     | Genere                                           |
   | description   | The summary description                          |
-
-
 
 
