@@ -43,7 +43,7 @@ To run the ETL process:
      | File name        | Description                                      |
      |------------------|--------------------------------------------------|
      | /artifacts/\*.\* | Non python files, mostly png files for REDAME    |
-     | type             | Identifier - A Movie or TV Show                  |
+     | /data/netflix.db | Database file to where tables are written  \n as part of the Load of ETL process  |
      | title            | Title of the Movie / Tv Show                     |
      | director         | Director of the Movie                            |
      | cast             | Actors involved in the movie / show              |
