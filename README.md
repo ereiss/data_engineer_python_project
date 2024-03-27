@@ -36,7 +36,7 @@ To run the ETL process:
 
 1. Project's files tree:
 
-![image](https://github.com/ereiss/data_engineer_python_project/blob/main/artifacts/head.png)
+![image](https://github.com/ereiss/data_engineer_python_project/blob/main/artifacts/project_file_tree.png)
 
 ## Detailed Process
 
