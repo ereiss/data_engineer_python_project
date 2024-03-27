@@ -30,7 +30,7 @@ To run the ETL process:
 2. Ensure you have Python and the required libraries installed (Pandas, SQLAlchemy):
    - pip install pandas
    - pip install sqlalchemy
-4. `netflix_titles.csv` dataset is dowloaded from google drive to project workspace - no need activelly do anything
+4. `netflix_titles.csv` dataset is dowloaded from google drive to project workspace - do nothing
 
 ## Dependencies
 
