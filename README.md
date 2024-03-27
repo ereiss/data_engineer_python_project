@@ -115,30 +115,6 @@ These are the steps that are going to be taken:
    - Check for and remove duplicate rows.
    - Be cautious when removing duplicates to avoid deleting legitimate data.
 
-## Database Schema
-
-The schema for the database table where the cleaned data is loaded follows:
-
-- Table Name: `netflix_titles`
-  
-  | Column Name     | Data Type |
-  |-----------------|-----------|
-  | type            | VARCHAR   |
-  | title           | VARCHAR   |
-  | director        | VARCHAR   |
-  | actor           | VARCHAR   |
-  | country         | VARCHAR   |
-  | date_added      | DATETIME  |
-  | release_year    | INTEGER   |
-  | rating          | VARCHAR   |
-  | duration        | VARCHAR   |
-  | genres          | VARCHAR   |
-  | duration_digits | INTEGER   |
-  | duration_unit   | VARCHAR   |
-  | year_added      | INTEGER   |
-  | month_added     | INTEGER   |
-  | day_added       | INTEGER   |
-
 ## Conclusion
 
 This ETL project successfully cleans and loads the Netflix Titles dataset into a relational database, making it easier to query and analyze the data for further insights and applications.
