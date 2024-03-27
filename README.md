@@ -27,10 +27,16 @@ The ETL process involves:
 To run the ETL process:
 
 1. Clone this repository to your local machine.
-2. Ensure you have Python and the required libraries installed (Pandas, SQLAlchemy).
+2. Ensure you have Python and the required libraries installed (Pandas, SQLAlchemy):
    - pip install pandas
    - pip install sqlalchemy
 4. `netflix_titles.csv` dataset is dowloaded from google drive to project workspace - no need activelly do anything
+
+## Dependencies
+
+1. Project's files tree:
+
+
 
 ## Detailed Process
 
