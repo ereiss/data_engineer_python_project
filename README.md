@@ -20,7 +20,7 @@ The ETL process involves:
 - Python
 - Pandas
 - SQLAlchemy
-- Jupyter Notebook (for initial data exploration and testing)
+- Google colab notebook (for initial data exploration and testing)
 
 ## Instructions
 
