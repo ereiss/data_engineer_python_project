@@ -28,8 +28,9 @@ To run the ETL process:
 
 1. Clone this repository to your local machine.
 2. Ensure you have Python and the required libraries installed (Pandas, SQLAlchemy).
-3. Download the `netflix_titles.csv` dataset from the provided source and place it in the project directory.
-4. Open the Jupyter Notebook `ETL_Netflix.ipynb` and execute the cells sequentially.
+   - pip install pandas
+   - pip install sqlalchemy
+4. `netflix_titles.csv` dataset is dowloaded from google drive to project workspace - no need activelly do anything
 
 ## Detailed Process
 
