@@ -49,14 +49,10 @@ Provides flexibility to override default configurations and customize settings b
      | /data/netflix.db            | Database file to where tables are written as part of the Load of ETL process   |
      | /utils/config.py            | A file that contains project's default configurations and customize settings   |
      | /utils/data_extracting.py   | Director of the Movie                                                          |
-     | cast             | Actors involved in the movie / show                                            |
-     | country          | Country where the movie / show was produced                                    |
-     | date_added       | Date it was added on Netflix                                                   |	
-     | release_year     | Actual Release year of the move / show                                         |
-     | rating           | TV Rating of the movie / show                                                  |
-     | duration         | Total Duration - in minutes or number of seasons                               |
-     | listed_in        | Genere                                                                         |
-     | description      | The summary description                                                        |
+     | cast                        | Actors involved in the movie / show                                            |
+     | country                     | Country where the movie / show was produced                                    |
+     | date_added                  | Date it was added on Netflix                                                   |	
+     | release_year                | Actual Release year of the move / show                                         |
 
 ## Detailed Process
 
