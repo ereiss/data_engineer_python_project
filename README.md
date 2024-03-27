@@ -46,7 +46,7 @@ Provides flexibility to override default configurations and customize settings b
 
    | File name                   | Description                                                                    |
    |-----------------------------|--------------------------------------------------------------------------------|
-   | /artifacts/\*.\*            | Non python files, mostly png files for REDAME                                  |
+   | /artifacts/\*.\*            | Non python files, mostly png files for README.md                               |
    | /data/netflix.db            | Database file to where tables are written as part of the Load of ETL process   |
    | /utils/config.py            | A file that contains project's default configurations and customize settings   |
    | /utils/data_extracting.py   | Methods required in order to connect to dataset and fetch it into dataframe    |
