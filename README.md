@@ -52,8 +52,8 @@ Provides flexibility to override default configurations and customize settings b
    | /utils/data_extracting.py   | Methods required in order to connect to dataset and fetch it into dataframe    |
    | /utils/data_processing.py   | Methods containing all data cleaning "tools" for this project                  |
    | /utils/data_loading.py      | Methods for loading process data into database tables                          |
-   | date_added                  | Date it was added on Netflix                                                   |	
-   | release_year                | Actual Release year of the move / show                                         |
+   | README.md                   | repository readme file                                                         |	
+   | main.py                     | main run file                                                                  |
 
 
 ## Detailed Process
