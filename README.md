@@ -38,6 +38,8 @@ To run the ETL process:
 
 ![image](https://github.com/ereiss/data_engineer_python_project/blob/main/artifacts/project_file_tree.png)
 
+2. Files description:
+
 ## Detailed Process
 
 1. **Extract**:
