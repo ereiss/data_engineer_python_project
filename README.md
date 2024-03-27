@@ -40,9 +40,9 @@ To run the ETL process:
 
 2. Files description:
 
-     | Column Name   | Description                                      |
+     | File name     | Description                                      |
      |---------------|--------------------------------------------------|
-     | show_id       | Unique ID for every Movie / Tv Show              |
+     | artifacts\*   | Non python files, mostly png files for REDAME    |
      | type          | Identifier - A Movie or TV Show                  |
      | title         | Title of the Movie / Tv Show                     |
      | director      | Director of the Movie                            |
