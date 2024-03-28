@@ -101,14 +101,7 @@ result = connection.execute(text(query))
 rows = result.fetchall()
 
 df = pd.DataFrame(rows, columns=result.keys())
-
-# Check if the file name ends with .ipynb (indicating Jupyter Notebook)
-if file_name.endswith('.ipynb'):
-    # Display the DataFrame using head (automatically displayed in Jupyter)
-    df.head(5)
-else:
-    # Print the first few rows of the DataFrame
-    print(df.head(5))
+print(df.head(5))
 
 print("\n>>> Who is the most productive Movie actor:")
 print("***************************************************\n")
@@ -128,14 +121,7 @@ result = connection.execute(text(query))
 rows = result.fetchall()
 
 df = pd.DataFrame(rows, columns=result.keys())
-
-# Check if the file name ends with .ipynb (indicating Jupyter Notebook)
-if file_name.endswith('.ipynb'):
-    # Display the DataFrame using head (automatically displayed in Jupyter)
-    df.head(5)
-else:
-    # Print the first few rows of the DataFrame
-    print(df.head(5))
+print(df.head(5))
 
 print("\n>>> Who is the most productive TV Show actor:")
 print("***************************************************\n")
@@ -155,14 +141,7 @@ result = connection.execute(text(query))
 rows = result.fetchall()
 
 df = pd.DataFrame(rows, columns=result.keys())
-
-# Check if the file name ends with .ipynb (indicating Jupyter Notebook)
-if file_name.endswith('.ipynb'):
-    # Display the DataFrame using head (automatically displayed in Jupyter)
-    df.head(5)
-else:
-    # Print the first few rows of the DataFrame
-    print(df.head(5))
+print(df.head(5))
 
 print("\n>>> Most frequent countries:")
 print("***************************************************\n")
@@ -181,14 +160,7 @@ result = connection.execute(text(query))
 rows = result.fetchall()
 
 df = pd.DataFrame(rows, columns=result.keys())
-
-# Check if the file name ends with .ipynb (indicating Jupyter Notebook)
-if file_name.endswith('.ipynb'):
-    # Display the DataFrame using head (automatically displayed in Jupyter)
-    df.head(10)
-else:
-    # Print the first few rows of the DataFrame
-    print(df.head(10))
+print(df.head(10))
 
 
 print("\n>>> Most frequent genres:")
@@ -205,13 +177,6 @@ result = connection.execute(text(query))
 rows = result.fetchall()
 
 df = pd.DataFrame(rows, columns=result.keys())
-
-# Check if the file name ends with .ipynb (indicating Jupyter Notebook)
-if file_name.endswith('.ipynb'):
-    # Display the DataFrame using head (automatically displayed in Jupyter)
-    df.head(10)
-else:
-    # Print the first few rows of the DataFrame
-    print(df.head(10))
+print(df.head(10))
 
 
