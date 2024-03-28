@@ -4,6 +4,7 @@ import utils.data_processing as transform
 import utils.data_loading as load
 from sqlalchemy import create_engine, text
 import pandas as pd
+import os
 
 #############################################
 # 1. Data extracting from google drive
@@ -80,6 +81,9 @@ engine.dispose()
 engine = create_engine('sqlite:///data/netflix.db')
 connection = engine.connect()
 
+# Get the current file name
+file_name = os.path.basename(__file__)
+
 print("Querying tables from database:")
 print("======================================================")
 
@@ -97,12 +101,14 @@ result = connection.execute(text(query))
 rows = result.fetchall()
 
 df = pd.DataFrame(rows, columns=result.keys())
-print(df.head(5))
 
-'''
-df_from_sql_directors = pd.read_sql_query(query, connection)
-print(df_from_sql_directors.head(5))
-'''
+# Check if the file name ends with .ipynb (indicating Jupyter Notebook)
+if file_name.endswith('.ipynb'):
+    # Display the DataFrame using head (automatically displayed in Jupyter)
+    df.head(5)
+else:
+    # Print the first few rows of the DataFrame
+    print(df.head(5))
 
 print("\n>>> Who is the most productive Movie actor:")
 print("***************************************************\n")
@@ -122,7 +128,14 @@ result = connection.execute(text(query))
 rows = result.fetchall()
 
 df = pd.DataFrame(rows, columns=result.keys())
-print(df.head(5))
+
+# Check if the file name ends with .ipynb (indicating Jupyter Notebook)
+if file_name.endswith('.ipynb'):
+    # Display the DataFrame using head (automatically displayed in Jupyter)
+    df.head(5)
+else:
+    # Print the first few rows of the DataFrame
+    print(df.head(5))
 
 print("\n>>> Who is the most productive TV Show actor:")
 print("***************************************************\n")
@@ -142,8 +155,14 @@ result = connection.execute(text(query))
 rows = result.fetchall()
 
 df = pd.DataFrame(rows, columns=result.keys())
-print(df.head())
 
+# Check if the file name ends with .ipynb (indicating Jupyter Notebook)
+if file_name.endswith('.ipynb'):
+    # Display the DataFrame using head (automatically displayed in Jupyter)
+    df.head(5)
+else:
+    # Print the first few rows of the DataFrame
+    print(df.head(5))
 
 print("\n>>> Most frequent countries:")
 print("***************************************************\n")
@@ -162,7 +181,15 @@ result = connection.execute(text(query))
 rows = result.fetchall()
 
 df = pd.DataFrame(rows, columns=result.keys())
-print(df.head(10))
+
+# Check if the file name ends with .ipynb (indicating Jupyter Notebook)
+if file_name.endswith('.ipynb'):
+    # Display the DataFrame using head (automatically displayed in Jupyter)
+    df.head(10)
+else:
+    # Print the first few rows of the DataFrame
+    print(df.head(10))
+
 
 print("\n>>> Most frequent genres:")
 print("***************************************************\n")
@@ -178,5 +205,13 @@ result = connection.execute(text(query))
 rows = result.fetchall()
 
 df = pd.DataFrame(rows, columns=result.keys())
-print(df.head(10))
+
+# Check if the file name ends with .ipynb (indicating Jupyter Notebook)
+if file_name.endswith('.ipynb'):
+    # Display the DataFrame using head (automatically displayed in Jupyter)
+    df.head(10)
+else:
+    # Print the first few rows of the DataFrame
+    print(df.head(10))
+
 
