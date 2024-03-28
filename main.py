@@ -2,7 +2,7 @@ import utils.config as config
 import utils.data_extracting as extract
 import utils.data_processing as transform
 import utils.data_loading as load
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, text
 import pandas as pd
 
 #############################################
@@ -75,6 +75,8 @@ engine.dispose()
 ##########################################
 ### 4. Querying from database
 ##########################################
+
+# Open connection to database
 engine = create_engine('sqlite:///data/netflix.db')
 connection = engine.connect()
 
@@ -91,8 +93,16 @@ query = f'''SELECT director, count(*) as NumTitles
         LIMIT 5'''
 
 # Execute the query and fetch the results into a DataFrame
+result = connection.execute(text(query))
+rows = result.fetchall()
+
+df = pd.DataFrame(rows, columns=result.keys())
+print(df.head(5))
+
+'''
 df_from_sql_directors = pd.read_sql_query(query, connection)
 print(df_from_sql_directors.head(5))
+'''
 
 print("\n>>> Who is the most productive Movie actor:")
 print("***************************************************\n")
@@ -106,8 +116,17 @@ query = f'''SELECT actor, count(*) as NumTitles
             ORDER BY 2 DESC
             LIMIT 1'''
 
+# Execute the query and fetch the results into a DataFrame
+
+result = connection.execute(text(query))
+rows = result.fetchall()
+
+df = pd.DataFrame(rows, columns=result.keys())
+print(df.head(5))
+'''
 df_from_sql_actors = pd.read_sql_query(query, connection)
 print(df_from_sql_actors.head(5))
+'''
 
 print("\n>>> Who is the most productive TV Show actor:")
 print("***************************************************\n")
@@ -122,8 +141,17 @@ query = f'''SELECT actor, count(*) as NumTitles
             LIMIT 1'''
 
 # Execute the query and fetch the results into a DataFrame
+
+result = connection.execute(text(query))
+rows = result.fetchall()
+
+df = pd.DataFrame(rows, columns=result.keys())
+print(df.head())
+
+'''
 df_from_sql_actors = pd.read_sql_query(query, connection)
 print(df_from_sql_actors.head(5))
+'''
 
 print("\n>>> Most frequent countries:")
 print("***************************************************\n")
@@ -137,8 +165,17 @@ query = f'''SELECT country, count(*) as NumTitiles
             LIMIT 10'''
 
 # Execute the query and fetch the results into a DataFrame
+
+result = connection.execute(text(query))
+rows = result.fetchall()
+
+df = pd.DataFrame(rows, columns=result.keys())
+print(df.head(10))
+
+'''
 df_from_sql_countries = pd.read_sql_query(query, connection)
 print(df_from_sql_countries.head(10))
+'''
 
 print("\n>>> Most frequent genres:")
 print("***************************************************\n")
@@ -149,5 +186,14 @@ query = f'''SELECT genres, count(*) as NumTitles
             LIMIT 5'''
 
 # Execute the query and fetch the results into a DataFrame
+
+result = connection.execute(text(query))
+rows = result.fetchall()
+
+df = pd.DataFrame(rows, columns=result.keys())
+print(df.head(10))
+
+'''
 df_from_sql_genres = pd.read_sql_query(query, connection)
 print(df_from_sql_genres.head(5))
+'''
