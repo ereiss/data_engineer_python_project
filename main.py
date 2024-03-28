@@ -123,10 +123,6 @@ rows = result.fetchall()
 
 df = pd.DataFrame(rows, columns=result.keys())
 print(df.head(5))
-'''
-df_from_sql_actors = pd.read_sql_query(query, connection)
-print(df_from_sql_actors.head(5))
-'''
 
 print("\n>>> Who is the most productive TV Show actor:")
 print("***************************************************\n")
@@ -148,10 +144,6 @@ rows = result.fetchall()
 df = pd.DataFrame(rows, columns=result.keys())
 print(df.head())
 
-'''
-df_from_sql_actors = pd.read_sql_query(query, connection)
-print(df_from_sql_actors.head(5))
-'''
 
 print("\n>>> Most frequent countries:")
 print("***************************************************\n")
@@ -172,11 +164,6 @@ rows = result.fetchall()
 df = pd.DataFrame(rows, columns=result.keys())
 print(df.head(10))
 
-'''
-df_from_sql_countries = pd.read_sql_query(query, connection)
-print(df_from_sql_countries.head(10))
-'''
-
 print("\n>>> Most frequent genres:")
 print("***************************************************\n")
 query = f'''SELECT genres, count(*) as NumTitles 
@@ -193,7 +180,3 @@ rows = result.fetchall()
 df = pd.DataFrame(rows, columns=result.keys())
 print(df.head(10))
 
-'''
-df_from_sql_genres = pd.read_sql_query(query, connection)
-print(df_from_sql_genres.head(5))
-'''
